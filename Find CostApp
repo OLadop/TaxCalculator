@@ -1,0 +1,80 @@
+package com.company;
+
+import java.util.Scanner;
+
+
+public class FindCostApp {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double InitialPrice;//The price with out VAT
+        double VAT;//VAT
+        double VATRate=0;//VAT rate
+        double FinalPrice;//The final price
+        String out;//The string to repeat everything
+
+
+        do {
+
+
+
+            System.out.println("Please insert The InitialPrice");//The user Insert The InitialPrice
+            InitialPrice = input.nextDouble();
+
+
+
+            System.out.println("Please Insert The VATRate");//The user Insert The VatRate
+            VATRate = input.nextDouble();
+
+
+
+
+
+            while (true) {//While Loop
+                if (InitialPrice > 0)//Checking if the InitialPrice Is higher Than 0
+
+
+
+                    break;
+            }
+
+
+
+
+
+            while (true) {//While Loop
+                if (VATRate > 0)//Checking if the VATRate is higher than 0
+
+
+
+                    break;
+            }
+
+
+
+
+            VAT = InitialPrice * (VATRate / 100);
+            FinalPrice = InitialPrice + VAT;
+
+
+
+
+
+            System.out.printf("\nThe new taxable amount of the product is= %.2",  FinalPrice);
+
+
+
+
+
+
+            System.out.println("if you Want to repeat The Process press [Y] ");
+            out = input.next();
+        }
+        while (out.equals("Y"));
+
+
+
+
+    }
